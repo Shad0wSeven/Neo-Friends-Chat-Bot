@@ -3,11 +3,11 @@ import os
 import discord
 from random import *
 import random
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
-# TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
@@ -165,4 +165,4 @@ async def on_message(message):
 
 
 # client.run(TOKEN)
-client.run("NzkxODM5MTYxMTU3NTUwMDkw.X-U_rw.8LNNH1kp1ufsbj2vkOSbehpgXdU")
+client.run(TOKEN)
