@@ -3,11 +3,13 @@ import os
 import discord
 from random import *
 import random
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
-TOKEN = os.getenv('DISCORD_TOKEN')
+# TOKEN = os.getenv('DISCORD_TOKEN')
+
+TOKEN = "NzkxODM5MTYxMTU3NTUwMDkw.X-U_rw.eYn98DIDbFhszEUG1c54JeUasBY"
 
 client = discord.Client()
 
