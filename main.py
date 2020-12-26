@@ -3,6 +3,10 @@ import os
 import discord
 from random import *
 import random
+import re
+
+from discord import activity
+from discord import channel
 # from dotenv import load_dotenv
 
 # load_dotenv()
@@ -17,6 +21,7 @@ version = "0.1.1"
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='you play with yourself'))
     print(f'{client.user} has connected to Discord')
 
 @client.event
@@ -76,6 +81,9 @@ async def on_message(message):
     
     # print(message.channel)
 
+    if "woodInvite" in msg:
+        await message.channel.send("Zoom Links Upcoming")
+
     if "horny" in str(message.channel):
         if message.attachments:
             await message.add_reaction('👍')
@@ -109,8 +117,13 @@ async def on_message(message):
             toSend = "https://nhentai.net/g/{}/".format(number)
             await message.channel.send(toSend)
         
-        if msg == "-version":
-            await message.channel.send(version)
+    if msg == "-version":
+        await message.channel.send(version)
+    
+
+    x = re.search("dQw4w9WgXcQ\w+", msg)
+    if x:
+        await message.channel.send ("WAIT! This message has a link for a rickroll in it! Stay Safe!")
             
 
     # Removed Features
@@ -156,6 +169,17 @@ async def on_message(message):
             await message.add_reaction('🚫')
 
     """
+    # general nHentai numbers
+    for mage in msg.split(" "):
+        x = re.search("^#\d\d\d", mage)
+        if x:
+            myMage = mage.split("#")[1]
+            if int(myMage) < 341200:
+                await message.channel.send("https://nhentai.net/g/{}/".format(myMage))
+        
+        y = re.search('([uUrR])\/\w+', mage)
+        if y:
+            await message.channel.send("https://www.reddit.com/{}".format(mage))
 
         
     
