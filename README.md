@@ -5,7 +5,7 @@
 ## Features
 - If you are `CheesyCake#4359` and you say anything remotely suggestive, the bot will pin the message to the channel
 
-- If you send a link to ah lets just say grown up mangadex, it will expand and allow for image manipulation and previews (think 6 digits. . .)
+- If you send a link to ah lets just say grown up mangadex, it will expand and allow for image manipulation and previews (think 6 digits...)
 
 - Reacts to random messages
 
