@@ -13,7 +13,7 @@ from discord import channel
 
 # TOKEN = os.getenv('DISCORD_TOKEN')
 
-TOKEN = "NzkxODM5MTYxMTU3NTUwMDkw.X-U_rw.eYn98DIDbFhszEUG1c54JeUasBY"
+TOKEN = "NO YOU DONT GET TO SEE THE TOKEN!"
 
 client = discord.Client()
 
